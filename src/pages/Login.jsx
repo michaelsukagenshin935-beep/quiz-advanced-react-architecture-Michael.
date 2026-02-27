@@ -82,7 +82,7 @@ export default function Login() {
           <button type="submit">Sign In →</button>
         </form>
 
-        <small>Use any email + password (4+ chars) to sign in.</small>
+        <small>email: "mich@1234", password: "0000"</small>
       </div>
     </div>
   );
