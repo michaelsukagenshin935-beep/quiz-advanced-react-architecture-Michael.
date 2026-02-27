@@ -1,0 +1,103 @@
+/* ===== ORDER SUCCESS ===== */
+
+.order-success {
+  min-height: 100vh;
+  background: #e9e7e4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px; /* supaya ga ketutup navbar */
+}
+
+.success-icon {
+  width: 70px;
+  height: 70px;
+  background: #16a34a;
+  color: white;
+  font-size: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.order-success h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.success-box {
+  display: flex;
+  background: white;
+  margin: 30px 0;
+  border: 1px solid #ddd;
+}
+
+.success-box > div {
+  padding: 20px 40px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+.success-box > div:last-child {
+  border-right: none;
+}
+
+.success-price {
+  color: #ff6a00;
+}
+
+.success-status {
+  color: #16a34a;
+}
+
+.order-success button {
+  background: #0f172a;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.order-success button:hover {
+  opacity: 0.8;
+}
+
+.success-box {
+  display: flex;
+  background: white;
+  margin: 30px 0;
+  border: 1px solid #ddd;
+  color: black; /* ⬅ TAMBAH INI */
+}
+
+.success-box span {
+  color: #555; /* label kecil */
+}
+
+.success-box h3 {
+  color: black;
+}
+
+.order-success {
+  min-height: 100vh;
+  background: #e9e7e4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+  color: black; /* ⬅ TAMBAH INI */
+}
+
+.order-success h1 {
+  color: black;
+}
+
+.order-success p {
+  color: #555;
+}

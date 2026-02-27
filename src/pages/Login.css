@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0b1120;
+}
+
+.login-card {
+  position: relative;
+  width: 480px;
+  background: #f4f1ec;
+  padding: 50px 40px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+.login-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;  
+  background: #f97316;
+}
+
+.welcome-text {
+  color: #f97316;
+  font-size: 12px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.login-card h1 {
+  font-size: 64px;        
+  font-weight: 900;       
+  line-height: 1.05;     
+  letter-spacing: -1px;   
+  color: #0f172a;         
+  margin-bottom: 16px;
+  max-width: 500px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 11px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+  color: #111;
+}
+
+input {
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #d1d5db;
+  background: #fff;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #f97316;
+}
+
+button {
+  margin-top: 10px;
+  padding: 14px;
+  background: #0b1120;
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #111827;
+}
+
+small {
+  display: block;
+  margin-top: 20px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+input {
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 14px;
+  color: #000000; 
+}
+
+input::placeholder {
+  color: #9ca3af;
+}
+
+input:focus {
+  outline: none;
+  border-color: #f97316;
+  color: #000000;
+}
+
+.login-wrapper {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0b1120;
+}
+
+.error-box {
+  background: #ffe6e6;
+  border: 1px solid #ff4d4d;
+  color: #cc0000;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 30px;
+  line-height: 1.6;
+  text-align: left;  
+}
+
+.title {
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.products-label,
+.products-title,
+.products-subtitle {
+  margin-left: 145px;
+}

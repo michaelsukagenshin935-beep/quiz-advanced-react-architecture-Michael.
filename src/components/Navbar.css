@@ -1,0 +1,66 @@
+.navbar {
+  height: 60px;
+  background: #0b1120;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.logo {
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.logo-o {
+  color: #f97316;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.nav-right a.active {
+  color: #f97316;
+}
+
+.logout-btn {
+  padding: 6px 14px;
+  background: transparent;
+  border: 1px solid #334155;
+  color: white;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background: #1e293b;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #ff6a00;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.logo-ob {
+  color: #ff6a00; /* oren elegan */
+}
