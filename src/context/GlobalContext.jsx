@@ -5,7 +5,6 @@ import { initialState } from "./initialState";
 export const GlobalContext = createContext();
 
 export const GlobalProvider = ({ children }) => {
-  // 🔥 Ambil data dari localStorage dengan aman
   const getInitialState = () => {
     try {
       const storedState = localStorage.getItem("state");
@@ -18,7 +17,6 @@ export const GlobalProvider = ({ children }) => {
 
   const [state, dispatch] = useReducer(reducer, getInitialState());
 
-  // 🔥 Simpan ke localStorage setiap state berubah
   useEffect(() => {
     try {
       localStorage.setItem("state", JSON.stringify(state));

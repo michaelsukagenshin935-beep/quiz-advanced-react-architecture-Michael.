@@ -15,6 +15,7 @@ export const reducer = (state, action) => {
         cart: [],
         totalItems: 0,
         totalPrice: 0,
+        orders: [],
       };
 
     case "ADD_TO_CART":
@@ -34,21 +35,17 @@ export const reducer = (state, action) => {
         updatedCart = [...state.cart, { ...action.payload, quantity: 1 }];
       }
 
-      const totalItems = updatedCart.reduce(
-        (sum, item) => sum + item.quantity,
-        0
-      );
-
-      const totalPrice = updatedCart.reduce(
-        (sum, item) => sum + item.price * item.quantity,
-        0
-      );
-
       return {
         ...state,
         cart: updatedCart,
-        totalItems,
-        totalPrice,
+        totalItems: updatedCart.reduce(
+          (sum, item) => sum + item.quantity,
+          0
+        ),
+        totalPrice: updatedCart.reduce(
+          (sum, item) => sum + item.price * item.quantity,
+          0
+        ),
       };
 
     case "REMOVE_FROM_CART":
@@ -67,6 +64,22 @@ export const reducer = (state, action) => {
           (sum, item) => sum + item.price * item.quantity,
           0
         ),
+      };
+
+    case "PLACE_ORDER":
+      const newOrder = {
+        items: state.cart,
+        totalItems: state.totalItems,
+        totalPrice: state.totalPrice,
+        date: new Date().toISOString(),
+      };
+
+      return {
+        ...state,
+        orders: [...state.orders, newOrder],
+        cart: [],
+        totalItems: 0,
+        totalPrice: 0,
       };
 
     case "CLEAR_CART":

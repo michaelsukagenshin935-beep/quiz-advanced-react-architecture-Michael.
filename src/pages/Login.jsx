@@ -19,10 +19,8 @@ export default function Login() {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Reset error dulu
     setError("");
 
-    // Validasi email format sederhana
     if (!email.includes("@")) {
       setError("Enter a valid email address.");
       return;

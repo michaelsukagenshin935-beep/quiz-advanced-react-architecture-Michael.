@@ -17,15 +17,14 @@ export default function Checkout() {
   const { state, dispatch } = useContext(GlobalContext);
   const navigate = useNavigate();
 
-  const handleOrder = () => {
-    dispatch({ type: "CLEAR_CART" });
-    navigate("/products");
+  const handlePlaceOrder = () => {
+    dispatch({ type: "PLACE_ORDER" });
+    navigate("/success"); 
   };
 
   return (
     <div className={`checkout-page ${state.cart.length === 0 ? "empty-mode" : ""}`}>
       {state.cart.length === 0 ? (
-        /* ================= EMPTY STATE ================= */
         <div className="empty-cart-wrapper">
           <p className="checkout-label">CHECKOUT</p>
           <h1>Your Cart</h1>
@@ -37,7 +36,6 @@ export default function Checkout() {
           </div>
         </div>
       ) : (
-        /* ================= NORMAL CHECKOUT ================= */
         <>
           <div className="checkout-left">
             <p className="checkout-label">CHECKOUT</p>
@@ -54,9 +52,7 @@ export default function Checkout() {
                     {item.name.includes("Keyboard") && <FaKeyboard />}
                     {item.name.includes("Watch") && <FaClock />}
                     {item.name.includes("Lamp") && <FaLightbulb />}
-                    {item.name.toLowerCase().includes("webcam") && (
-                      <FaCamera />
-                    )}
+                    {item.name.toLowerCase().includes("webcam") && <FaCamera />}
                     {item.name.includes("Speaker") && <FaVolumeUp />}
                   </div>
 
@@ -100,7 +96,7 @@ export default function Checkout() {
 
             <button
               className="order-btn"
-              onClick={() => navigate("/success")}
+              onClick={handlePlaceOrder}
             >
               Place Order
             </button>

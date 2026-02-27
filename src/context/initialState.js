@@ -4,4 +4,5 @@ export const initialState = {
   cart: [],
   totalItems: 0,
   totalPrice: 0,
+   orders: []
 };
